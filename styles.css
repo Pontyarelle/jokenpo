@@ -1,0 +1,186 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: red;
+  }
+  100% {
+    border-color: yellow;
+  }
+}
+
+@keyframes scoreBorderAnimation {
+  0% {
+    border-color: yellow;
+  }
+  50% {
+    border-color: green;
+  }
+  100% {
+    border-color: yellow;
+  }
+}
+
+header,
+footer {
+  width: 100%;
+  position: fixed;
+  background-color: rgb(0, 117, 250);
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-style: dotted;
+  border-width: 12px;
+  text-shadow: 4px 4px 4px rgb(0, 0, 0); 
+  animation: borderAnimation 2s infinite;
+}
+
+.super{
+  color: rgb(206, 209, 9);
+}
+
+.jo {
+  color: rgb(192, 11, 192);
+}
+
+.ken {
+  color: rgb(37, 223, 37);
+}
+
+.po {
+  color: rgb(42, 42, 231);
+}
+
+header {
+  top: 0;
+  padding: 20px;
+}
+
+footer {
+  bottom: 0;
+  padding: 25px;
+}
+
+span {
+  display: inline-block;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  animation: piscar 1s infinite; /* Aplicando a animação de piscar */
+}
+
+@keyframes piscar {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: calc(100vh - 100px); /* Ajuste para a altura do header e footer */
+  background-color: black;
+  overflow: hidden; /* Garante que o conteúdo não transborde o container */
+}
+
+.placar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.placar-player,
+.placar-inimigo {
+  margin-bottom: 80px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  animation: scoreBorderAnimation 2s infinite;
+}
+
+.pontos-player,
+.pontos-inimigo {
+  padding: 40px;
+  margin: 40px;
+  color: white;
+  background-color: gray;
+  font-size: 80px; /* Ajuste para garantir que dois dígitos caibam confortavelmente */
+  border-style: dotted;
+  border-width: 7px;
+  border-color: yellow;
+  border-radius: 20px;
+  animation: scoreBorderAnimation 2s infinite;
+}
+
+.align {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Adiciona espaço entre as opções do jogador e do inimigo */
+  justify-content: center; /* Centraliza as imagens no contêiner */
+}
+
+.player-options,
+.enemy-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-options img,
+.enemy-options img {
+  max-width: 200px; /* Limita o tamanho inicial das imagens */
+  height: auto; /* Mantém a proporção das imagens */
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+/*responsividade*/
+@media (max-width: 600px) {
+  header,
+  footer {
+    font-size: 14px;
+    padding: 30px;
+  }
+
+  .placar-player,
+  .placar-inimigo {
+    margin-bottom: 80px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation: scoreBorderAnimation 2s infinite;
+  }
+  .pontos-player,
+  .pontos-inimigo {
+    padding: 30px;
+    font-size: 30px; /* Ajuste para dispositivos móveis */
+  }
+
+  .player-options img,
+  .enemy-options img {
+    display: flex;
+    align-items: center;
+    max-width: 55px; /* Reduz o tamanho máximo das imagens em dispositivos móveis */
+  }
+}

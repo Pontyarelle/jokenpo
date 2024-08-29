@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
+    <title>Jogo Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+</head>
+<body>
+    <header>
+        <h1 class="super">SUPER <span class="jo">JO</span><span class="ken">KEN</span><span class="po">PO</span></h1>
+    </header>
+
+    <div class="container">
+        <div class="placar-container">
+            <div class="placar-player">
+                <h1>PLAYER</h1>
+                <h1 class="pontos-player">0</h1>
+            </div>
+
+            <div class="align">
+                <div class="player-options">
+                    <div><img opt="pedra" src="rock.png" alt="Pedra"></div>
+                    <div><img opt="papel" src="paper.png" alt="Papel"></div>
+                    <div><img opt="tesoura" src="scisor.png" alt="Tesoura"></div>
+                </div>
+
+                <div class="enemy-options">
+                    <div><img opt="pedra" src="rock.png" alt="Pedra"></div>
+                    <div><img opt="papel" src="paper.png" alt="Papel"></div>
+                    <div><img opt="tesoura" src="scisor.png" alt="Tesoura"></div>
+                </div>
+            </div>
+
+            <div class="placar-inimigo">
+                <h1>IA</h1>
+                <h1 class="pontos-inimigo">0</h1>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2 class="vencedor">VAMOS TENTAR A SORTE!</h2>
+    </footer>
+    <script src="game.js"></script>   
+</body>
+</html>
